@@ -1,0 +1,31 @@
+version: '3'
+
+services:
+    back:
+        build: ./back
+        ports:
+            - 3000:3000
+            - 3001:3001
+        volumes:
+            - $HOME/app
+        environment: 
+            - SECRET=e8d95a51f3af4a3b134bf6bb680a213a
+            - USER=$USER
+            - PASSWORD=$PASSWORD
+            - TW_CONSUMER_KEY=$TW_CONSUMER_KEY
+            - TW_CONSUMER_SECRET=$TW_CONSUMER_SECRET
+            - TW_TOKEN=$TW_TOKEN
+            - TW_TOKEN_SECRET=$TW_TOKEN_SECRET
+            - SOCKET_PORT=3001
+            - FRONT_HOST=http://localhost:3002
+            - PORT=3000
+    front:
+        build: ./front
+        ports:
+            - 3002:3002
+        volumes:
+            - $HOME/app
+        environment: 
+            - PORT=3002
+            - REACT_APP_SOCKET_HOST=http://localhost:3001
+            - REACT_APP_API_HOST=http://localhost:3000

@@ -1,0 +1,55 @@
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    align-self: flex-end;
+    color: #383f44;
+    margin-right: 20px;
+    margin-top: 10px;
+}
+
+.title {
+    color: #383f44;
+    margin-left: 20px;
+    font-size: 20px;
+}
+
+.logout {
+    cursor: pointer;
+    font-weight: 500;
+    padding: 20px 0px;
+    width: fit-content;
+    margin-left: 10px;
+}
+
+.tweets-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.tweet-selected {
+    margin-bottom: 20px;
+}
+
+.search-form {
+    display: flex;
+}
+
+.search-form {
+    display: flex;
+    padding: 0px 20px;
+    margin-top: 10px;
+}
+
+.search-form input {
+    flex-grow: 10;
+    width: initial;
+}
+
+.search-form button {
+    margin-left: 10px;
+    flex-grow: 1;
+    width: initial;
+}
